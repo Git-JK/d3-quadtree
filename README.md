@@ -1,14 +1,19 @@
 # d3-quadtree
 
-A[四叉树](https://en.wikipedia.org/wiki/Quadtree) 递归地将二维空间分割成正方形, 即将每个正方形划分成四个大小相等的正方形. 每个不同点存在于唯一的叶子节点[(node)](#nodes) 中，重合点由链表表示。 Quadtrees can accelerate various spatial operations, such as the [Barnes–Hut approximation](https://en.wikipedia.org/wiki/Barnes–Hut_simulation) for computing many-body forces, collision detection, and searching for nearby points.
+[四叉树](https://en.wikipedia.org/wiki/Quadtree) 递归地将二维空间分割成正方形, 即将每个正方形划分成四个大小相等的正方形. 每个不同点存在于唯一的叶子节点[(node)](#nodes) 中，重合点由链表表示。 四叉树可以加速各种空间操作，如计算多体力量 ：[Barnes–Hut approximation](https://en.wikipedia.org/wiki/Barnes–Hut_simulation) ,碰撞校验 并且可用于寻找附近的点。
 
 <a href="http://bl.ocks.org/mbostock/9078690"><img src="http://bl.ocks.org/mbostock/raw/9078690/thumbnail.png" width="202"></a>
 <a href="http://bl.ocks.org/mbostock/4343214"><img src="http://bl.ocks.org/mbostock/raw/4343214/thumbnail.png" width="202"></a>
 
 ## Installing
-
-If you use NPM, `npm install d3-quadtree`. Otherwise, download the [latest release](https://github.com/d3/d3-quadtree/releases/latest). You can also load directly from [d3js.org](https://d3js.org), either as a [standalone library](https://d3js.org/d3-quadtree.v1.min.js) or as part of [D3 4.0](https://github.com/d3/d3). AMD, CommonJS, and vanilla environments are supported. In vanilla, a `d3` global is exported:
-
+npm安装
+```node
+npm install d3-quadtree
+```
+下载：[latest release](https://github.com/d3/d3-quadtree/releases/latest).
+官网下载：[d3js.org](https://d3js.org), 
+lib：[standalone library](https://d3js.org/d3-quadtree.v1.min.js) 
+模块化引入：[D3 4.0](https://github.com/d3/d3). AMD, CommonJS, （通过全局变量`d3`来使用）
 ```html
 <script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
 <script>
